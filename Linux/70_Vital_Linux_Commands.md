@@ -9,76 +9,188 @@ This cheat sheet contains essential Linux commands required for daily SOC operat
 
 ## 💻 Command Reference
 
-| S.No | Command | Description | Practical Example |
-| :--- | :--- | :--- | :--- |
-| 1 | `pwd` | Prints the current working directory. | `pwd` displays the full path of the current directory. |
-| 2 | `ls` | Lists directory contents. | `ls -l` lists files in long format, showing permissions, owner, size, and modification date.<br><br>`ls -a` lists files including hidden files (those starting with a dot).<br><br>`ls -la` list directory contents in a long format, including hidden files. |
-| 3 | `cd` | Changes the current directory. | `cd /home/user` changes the directory to /home/user. |
-| 4 | `touch` | Creates an empty file or updates the timestamp of an existing file. | `touch newfile.txt` creates an empty file named newfile.txt. |
-| 5 | `echo` | Displays a line of text or a variable value. | `echo "Hello, World!"` prints Hello, World! to the terminal.<br><br>`echo "Hello, World!" > filename.txt` creates a new text file named "filename.txt" (or overwrites it if it already exists) and writes the phrase "Hello, World!" into it.<br><br>`echo "Hello, World!" >> filename.txt` appends the phrase "Hello, World!" to the end of the existing file named "filename.txt" (or creates the file if it doesn't exist). |
-| 6 | `rm` | Removes files or directories. | `rm file.txt` deletes file.txt. |
-| 7 | `cp` | Copies files or directories. | `cp file1.txt file2.txt` copies file1.txt to file2.txt.<br><br>`cp file1.txt ./Desktop` copies the file named "file1.txt" from the current directory to the Desktop folder. |
-| 8 | `mv` | Used for moving and renaming files and directories. | `mv oldname.txt newname.txt` renames oldname.txt to newname.txt in the current directory.<br><br>`mv file1.txt ./Desktop` moves the file named "file1.txt" from the current directory to the Desktop folder. |
-| 9 | `cat` | Concatenates and displays file content. | `cat file.txt` displays the content of file.txt. |
-| 10 | `nano` | Open the Nano text editor. | `nano file.txt` opens file.txt in the Nano editor. |
-| 11 | `vim` | Open the Vim text editor. | `vim file.txt` opens file.txt in the Vim editor. |
-| 12 | `shred` | Overwrites a file to hide its contents and optionally deletes it. | `shred -u file.txt` overwrites and deletes file.txt. |
-| 13 | `mkdir` | Creates a new directory. | `mkdir newdir` creates a directory named newdir. |
-| 14 | `rmdir` | Removes an empty directory. | `rmdir olddir` removes the empty directory olddir. |
-| 15 | `ln` | Creates hard and symbolic links. | `ln -s target linkname` creates a symbolic link named linkname pointing to target. |
-| 16 | `clear` | Clears the terminal screen. | `clear` clears the terminal display. |
-| 17 | `whoami` | Displays the current logged-in user. | `whoami` shows the username of the current user. |
-| 18 | `useradd` | Adds a new user. | `sudo useradd newuser` adds a new user named newuser. |
-| 19 | `sudo` | Executes a command as another user, typically the superuser. | `sudo apt-get update` runs the `apt-get update` command with superuser privileges. |
-| 20 | `adduser` | Adds a new user with a more interactive interface. | `sudo adduser newuser` interactively adds a new user named newuser. |
-| 21 | `su` | Switch to another user account. | `su - user` switches to the `user` account. |
-| 22 | `exit` | Exits the current shell or session. | `exit` logs out of the current session. |
-| 23 | `passwd` | Changes a user's password. | `passwd` prompts to change the current user's password. |
-| 24 | `apt` | Manages packages on Debian-based systems. | `sudo apt install package` installs the specified package.<br><br>`sudo apt remove package` removes the specified package.<br><br>`apt update` update the package list<br><br>`apt upgrade` upgrade installed packages to their latest versions<br><br>`apt dist-upgrade` perform a comprehensive system upgrade |
-| 25 | `ssh` | Connects to a remote machine via SSH. | `ssh user@hostname` connects to the remote machine `hostname` as `user`. |
-| 26 | `finger` | Displays information about system users. | `finger user` shows details about `user`. |
-| 27 | `man` | Displays the manual page for a command. | `man ls` shows the manual for the `ls` command. |
-| 28 | `whatis` | Displays a brief description of a command. | `whatis ls` provides a short description of the `ls` command. |
-| 29 | `curl` | Transfers data from or to a server. | `curl -O http://example.com/file.txt` downloads `file.txt` from the specified URL. |
-| 30 | `zip` | Compresses files into a zip archive. | `zip archive.zip file1 file2` compresses `file1` and `file2` into `archive.zip`. |
-| 31 | `unzip` | Extracts files from a zip archive. | `unzip archive.zip` extracts files from `archive.zip`. |
-| 32 | `less` | Views file content one screen at a time. | `less file.txt` displays `file.txt` content one screen at a time. |
-| 33 | `head` | Displays the first part of a file. | `head -n 10 file.txt` shows the first 10 lines of `file.txt`. |
-| 34 | `tail` | Displays the last part of a file. | `tail -n 10 file.txt` shows the last 10 lines of `file.txt`. |
-| 35 | `cmp` | Compare two files byte by byte. | `cmp file1 file2` compares `file1` and `file2`. |
-| 36 | `diff` | Compares files line by line. | `diff file1 file2` shows the differences between `file1` and `file2`. |
-| 37 | `sort` | Sorts lines of text files. | `sort file.txt` sorts the lines in `file.txt`. |
-| 38 | `find` | Searches for files in a directory hierarchy. | `find /home -name "*.txt"` finds all `.txt` files in the `/home` directory. |
-| 39 | `chmod` | Changes file permissions. | `chmod 755 script.sh` sets the permissions of `script.sh` to `rwxr-xr-x`. |
-| 40 | `chown` | Changes file owner and group. | `chown user:group file.txt` changes the owner and group of `file.txt` to `user` and `group`. |
-| 41 | `ifconfig` | Display network interface information. Configures network interfaces. | `ifconfig eth0` displays the configuration of the `eth0` interface. |
-| 42 | `ip address` | Displays IP addresses and interfaces. | `ip address show` shows all IP addresses and network interfaces. |
-| 43 | `grep` | Searches for patterns in files. | `grep "pattern" file.txt` searches for "pattern" in `file.txt`. |
-| 44 | `awk` | A programming language for pattern scanning and processing. | `awk '{print $1}' file.txt` prints the first field of each line in `file.txt`. |
-| 45 | `resolvectl status` | Shows the current DNS settings. | `resolvectl status` displays the DNS configuration and status. |
-| 46 | `ping` | Sends ICMP ECHO_REQUEST packets to network hosts. | `ping google.com` sends ping requests to `google.com`. |
-| 47 | `netstat` | Displays network connections, routing tables, and interface statistics. | `netstat -tuln` shows listening ports and their status. |
-| 48 | `ss` | Displays socket statistics. | `ss -tuln` shows listening sockets.<br><br>`ss -l4p` displays all listening IPv4 sockets along with the associated processes |
-| 49 | `iptables` | Configures packet filtering rules. | `sudo iptables -L` lists all current iptables rules. |
-| 50 | `ufw` | Manages firewall with Uncomplicated Firewall. | `sudo ufw enable` enables the firewall. |
-| 51 | `uname` | Prints system information. | `uname -a` displays all system information. |
-| 52 | `neofetch` | Displays system information with an aesthetic layout. | `neofetch` shows system information in a visually appealing format. |
-| 53 | `cal` | Displays a calendar. | `cal` shows the current month's calendar. |
-| 54 | `free` | Displays memory usage. | `free -h` shows memory usage in a human-readable format. |
-| 55 | `df` | Displays disk space usage of file systems. | `df -h` shows disk space usage in a human-readable format. |
-| 56 | `ps` | Displays information about active processes. | `ps aux` shows detailed information about all running processes. |
-| 57 | `top` | Displays real-time system resource usage. | `top` shows real-time processes and system resource usage. |
-| 58 | `htop` | An interactive process viewer. | `htop` provides an interactive view of system processes. |
-| 59 | `kill` | Terminates a process by PID. | `kill 1234` terminates the process with PID 1234. |
-| 60 | `pkill` | Terminates processes by name. | `pkill firefox` terminates all processes named `firefox`. |
-| 61 | `systemctl` | Manages systemd services. | `systemctl status nginx` shows the status of the `nginx` service. |
-| 62 | `history` | Displays the command history. | `history` shows the list of previously executed commands. |
-| 63 | `reboot` | Reboots the system. | `sudo reboot` restarts the system. |
-| 64 | `shutdown` | Shuts down or reboots the system. | `sudo shutdown -h now` shuts down the system immediately. |
-| 65 | `traceroute` | Traces the route packets take to a network host. | `traceroute google.com` shows the route to `google.com`. |
-| 66 | `dig` | Queries DNS servers. | `dig example.com` retrieves DNS information for `example.com`. |
-| 67 | `host` | Performs DNS lookups. | `host example.com` shows the IP address of `example.com`. |
-| 68 | `arp` | Displays and modifies the ARP table. | `arp -a` shows the current ARP table. |
-| 69 | `iwconfig` | Configures wireless network interfaces. | `iwconfig wlan0` shows the configuration of the `wlan0` wireless interface. |
-| 70 | `hostname` | Displays or sets the system's hostname. | `hostname` shows the current hostname. |
-| 71 | `whois` | Queries the WHOIS database for domain information. | `whois example.com` retrieves WHOIS information for `example.com`. |
+## 📂 1. Directory & File Operations
+
+### Navigation & Directory Creation
+| Command | Description | Practical Example / Notes |
+| :--- | :--- | :--- |
+| `pwd` | Displays the present working directory. | `pwd` |
+| `ls` | Lists directory contents. | `ls -la` (all files, hidden files, permissions), `ls -l` (long format). |
+| `tree` | Shows all folders and subfolders within it in a tree structure. | `tree /var/log` |
+| `cd` | Changes the current working directory. | `cd /var/log` (path), `cd ..` (up one level), `cd ~` (home folder). |
+| `mkdir` | Creates a new directory. | `mkdir newdir`, `mkdir -p x/y/z` (creates parent directories too). |
+| `rmdir` | Removes an empty directory. | `rmdir olddir` |
+| `touch` | Creates an empty file or updates the timestamp. | `touch newfile.txt` |
+
+### Advanced File Manipulations (Copy, Move, Remove)
+| Command | Description | Practical Example / Notes |
+| :--- | :--- | :--- |
+| `cp` | Copies files or directories. | `cp file1 file2` (copies/overwrites).<br>`cp -r dir1 dir2` (Recursive copy).<br>`cp -rv dir1 dir2` (Recursive & Verbose).<br>`sudo cp -a -r dir1 dir2` (Archive: preserves permissions, ownership, timestamps).<br>`sudo cp -i -r dir1 dir2` (Interactive: asks before overwrite). |
+| `mv` | Moves and/or renames files and directories. | `mv oldname newname` (renames).<br>`mv file1 /Desktop/` (moves). |
+| `rm` | Removes files or directories. | `rm file.txt` (deletes file).<br>`rm -r directory` (deletes directory). |
+| `shred` | Secure deletion by overwriting with garbage data. | `shred -u file.txt` (overwrites and deletes, preventing recovery). |
+| `ln` | Creates hard and symbolic links. | `ln -s target linkname` |
+
+### File Viewing, Editing & Text Processing
+| Command | Description | Practical Example / Notes |
+| :--- | :--- | :--- |
+| `cat` | Concatenates and displays file content. | `cat file.txt` (view).<br>`cat > file.txt` (write text manually, press Ctrl+D to save). |
+| `less` | Views file content one screen/page at a time. | `less /var/log/syslog` |
+| `head` | Displays the first part of a file. | `head -n 10 file.txt` |
+| `tail` | Displays the last part of a file. | `tail -n 10 file.txt`<br>`tail -f /var/log/auth.log` (**Crucial:** Live log monitoring). |
+| `echo` | Displays a line of text or writes to a file. | `echo "msg" > file.txt` (overwrites).<br>`echo "msg" >> file.txt` (appends). |
+| `printf` | Used to write formatted scripts. | `printf "Name: Rohit\n" > info.txt` |
+| `nano` / `vim` | Terminal text editors. | `nano file.txt` or `vim file.txt` |
+| `cmp` / `diff`| Compares files. | `cmp file1 file2` (byte by byte).<br>`diff file1 file2` (line by line). |
+| `sort` | Sorts lines of text files. | `sort file.txt` |
+| `awk` | Programming language for pattern scanning. | `awk '{print $1}' file.txt` (prints first field). |
+
+---
+
+## 🔐 2. Permissions & Ownership
+
+### Changing Permissions (`chmod`)
+*Format: Read (`r`=4), Write (`w`=2), Execute (`x`=1)*
+
+| Command | Description | Practical Example / Notes |
+| :--- | :--- | :--- |
+| `chmod` | Changes file permissions. | `chmod 755 script.sh` (User=7, Group=5, Other=5).<br>`chmod u=rwx,g=rx,o=rx file.txt` (Explicit method).<br>`chmod g+w file.txt` (Adds write permission to group).<br>`chmod -R 766 dir/` (Recursive directory permission change). |
+
+### Changing Ownership (`chown`)
+| Command | Description | Practical Example / Notes |
+| :--- | :--- | :--- |
+| `chown` | Changes file owner and group. | `chown user:group file.txt` (changes both).<br>`chown -R user:group dir/` (Recursive).<br>`chown user file.txt` (user only).<br>`chown :group file.txt` (group only). |
+
+---
+
+## 👤 3. User & Group Management
+
+### Users & Groups
+| Command | Description | Practical Example / Notes |
+| :--- | :--- | :--- |
+| `whoami` | Displays current logged-in user. | `whoami` |
+| `finger` | Displays information about system users. | `finger user` |
+| `su` / `sudo` | Switch user / Execute as superuser. | `su - username` (switch user).<br>`sudo -su username` (force switch using your admin password). |
+| `useradd` | Adds a new user. | `useradd username` (no home dir).<br>`useradd -m username` (with home dir). |
+| `adduser` | Adds a new user interactively. | `sudo adduser newuser` |
+| `userdel` | Deletes a user. | `userdel username` |
+| `usermod` | Modifies a user account. | `usermod -aG group user` (adds user to group). |
+| `groupadd` / `groupdel`| Adds / Deletes a group. | `sudo groupadd -r sysgrp` (creates system group). |
+| `getent group` | See all groups on the system. | `getent group` |
+| `compgen -u` | See all usernames on the system. | `compgen -u` |
+| `exit` | Exits current shell. | `exit` |
+
+### Password Aging & Policies (`passwd` & `chage`)
+| Command | Description | Practical Example / Notes |
+| :--- | :--- | :--- |
+| `passwd` | Manages passwords. | `passwd username` (change/add).<br>`passwd -d username` (passwordless).<br>`passwd -l username` (locks account).<br>`passwd -u username` (unlocks account). |
+| `chage` | Password expiry and aging policies. | `chage -d 0 username` (force change on next login).<br>`chage -M 60 username` (set 60-day expiry limit).<br>`chage -W 7 username` (7-day warning before expiry).<br>`sudo chage -d $(date +%Y-%m-%d) user` (**Pro Trick:** Resets countdown cycle to today without changing actual password). |
+
+---
+
+## ⚙️ 4. Package Management (Debian/Ubuntu)
+
+| Command | Description | Practical Example / Notes |
+| :--- | :--- | :--- |
+| `apt` | Manages packages. | `sudo apt update` (fetches latest lists).<br>`sudo apt upgrade` (installs updates).<br>`sudo apt install package` (installs).<br>`sudo apt remove package` (removes).<br>`apt dist-upgrade` (comprehensive upgrade). |
+
+---
+
+## 🔄 5. Process Management & Services
+
+### Processes
+| Command | Description | Practical Example / Notes |
+| :--- | :--- | :--- |
+| `ps` | Displays active processes. | `ps aux` (ALL running processes).<br>`ps -f t pts/0` (processes for a specific terminal). |
+| `top` / `htop` | Real-time system resource & process monitor. | `top` (exit with 'q'). `htop` is interactive. |
+| `pgrep` | Gets Process IDs (PIDs). | `pgrep -l -u username` (gets PIDs for a specific user). |
+| `kill` | Terminates process by PID. | `kill 1234`<br>`sudo kill -9 PID` (Force kill). |
+| `pkill` | Terminates process by name/user. | `pkill firefox`<br>`sudo pkill -u username` (kicks a user completely). |
+
+### Services (Systemd)
+*Note: We are using `apache2` as the example web service.*
+
+| Command | Description | Practical Example / Notes |
+| :--- | :--- | :--- |
+| `systemctl` | Manages systemd services. | `systemctl start apache2`<br>`systemctl stop apache2`<br>`systemctl enable apache2` (launches on boot).<br>`systemctl disable apache2`<br>`systemctl status apache2` (dashboard/troubleshooting).<br>`systemctl restart apache2` |
+
+---
+
+## 🌐 6. Networking & Advanced Searching
+
+### Network Configuration & Troubleshooting
+| Command | Description | Practical Example / Notes |
+| :--- | :--- | :--- |
+| `ip address` / `ifconfig` | Displays network interfaces and IPs. | `ip address show` |
+| `ping` | Sends ICMP echo requests. | `ping google.com` |
+| `netstat` | Displays network connections/ports. | `netstat -tuln` (shows listening ports). |
+| `ss` | Socket statistics (modern netstat). | `ss -tuln`<br>`ss -l4p` (IPv4 sockets with processes). |
+| `iptables` | Packet filtering rules. | `sudo iptables -L` |
+| `ufw` | Uncomplicated Firewall manager. | `sudo ufw enable` |
+| `hostname` / `hostnamectl`| Displays/sets system hostname. | `hostnamectl` (Shows OS, Kernel version, static name). |
+| `sudo nmtui` | Text-based GUI for NetworkManager. | `sudo nmtui` |
+| `resolvectl status` | Shows current DNS settings. | `resolvectl status` |
+| `traceroute` | Traces route to a host. | `traceroute google.com` |
+| `dig` / `host` | DNS lookups and queries. | `dig example.com`<br>`host example.com` |
+| `arp` | Displays/modifies ARP table. | `arp -a` |
+| `iwconfig` | Configures wireless interfaces. | `iwconfig wlan0` |
+| `whois` | Queries domain WHOIS database. | `whois example.com` |
+| `ssh` | Connects to a remote machine. | `ssh user@hostname` |
+
+### Advanced Searching (`find` & `grep`)
+| Command | Description | Practical Example / Notes |
+| :--- | :--- | :--- |
+| `find` | Searches for files in directory hierarchy. | `find / -name file.txt` (searches entire drive).<br>`find /home/user -name "*.txt"` |
+| `grep` | Searches for patterns in files. | `grep "root" /etc/passwd` |
+| `Pipeline Search` | Combines `find` and `grep` using `xargs`. | `find . -name "*.txt" \| xargs grep "password"` (Finds all text files and searches inside them for 'password'). |
+
+---
+
+## 💻 7. System Information & Utilities
+
+| Command | Description | Practical Example / Notes |
+| :--- | :--- | :--- |
+| `uname` | Prints system information. | `uname -a` |
+| `neofetch` | System info with aesthetic layout. | `neofetch` |
+| `free` | Displays memory usage. | `free -h` (human-readable). |
+| `df` | Displays disk space usage. | `df -h` |
+| `cal` | Displays a calendar. | `cal` |
+| `clear` | Clears terminal screen. | `clear` |
+| `history` | Command history manager. | `history`<br>`history -d [PID]` (Deletes specific command).<br>`history -c` (Clears all history). |
+| `alias` | Creates command shortcuts. | `alias update='sudo apt update'` |
+| `man` / `whatis` | Manuals and descriptions. | `man ls`<br>`whatis ls` |
+| `reboot` / `shutdown`| Restart or power off. | `sudo reboot`<br>`sudo shutdown -h now` |
+
+### Archiving & Transfers
+| Command | Description | Practical Example / Notes |
+| :--- | :--- | :--- |
+| `curl` | Transfers data from/to server. | `curl -O http://example.com/file.txt` |
+| `zip` / `unzip` | Compresses/extracts archives. | `zip archive.zip file1 file2`<br>`unzip archive.zip` |
+
+---
+
+## 💡 Pro-Tips & Text Editor Shortcuts
+
+### Getting Quick Help
+If you don't want to read a full `man` page, you can append `--help` to almost any command to see its available options instantly.
+- `ls --help`
+- `cat --help`
+
+### Changing Hostname Permanently
+While `hostnamectl` shows system info, you can use it to rename your server permanently without editing config files manually:
+- `sudo hostnamectl set-hostname new-server-name`
+
+### 📝 Nano Editor Essential Keys
+- **Start typing:** Just type directly.
+- **Save file:** `Ctrl + O` -> `Enter` (to confirm filename)
+- **Exit nano:** `Ctrl + X`
+- **Cut/Paste line:** `Ctrl + K` (Cut), `Ctrl + U` (Paste)
+- **Search text:** `Ctrl + W`
+- **Undo:** `Alt + U`
+
+### 📝 Vi / Vim Editor Essential Keys
+- **Insert Mode:** `i` (Start typing)
+- **Command Mode:** `Esc` (Stop typing and issue commands)
+- **Save:** `:w`
+- **Quit:** `:q`
+- **Save & Quit:** `:wq`
