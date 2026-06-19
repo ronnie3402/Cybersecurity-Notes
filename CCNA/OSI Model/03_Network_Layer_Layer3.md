@@ -5,7 +5,7 @@ The Network Layer is responsible for providing logical addressing and enabling c
 
 
 
----
+
 
 ## Responsibilities
 * **Logical Addressing:** Assigning and managing IP addresses.
