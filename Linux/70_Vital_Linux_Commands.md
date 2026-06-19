@@ -78,3 +78,12 @@ This cheat sheet contains essential Linux commands required for daily SOC operat
 | 69 | `iwconfig` | Configures wireless network interfaces. | `iwconfig wlan0` |
 | 70 | `hostname` | Displays or sets the system's hostname. | `hostname` |
 | 71 | `whois` | Queries the WHOIS database for domain information. | `whois example.com` |
+
+
+| S.No | Command | Description | Practical Example |
+| :--- | :--- | :--- | :--- |
+| 1 | `pwd` | Prints the current working directory. | `pwd` displays the full path of the current directory. |
+| 2 | `ls` | Lists directory contents. | `ls -l` lists files in long format, showing permissions, owner, size, and modification date.<br><br>`ls -a` lists files including hidden files (those starting with a dot).<br><br>`ls -la` list directory contents in a long format, including hidden files. |
+| 3 | `cd` | Changes the current directory. | `cd /home/user` changes the directory to /home/user. |
+| 4 | `touch` | Creates an empty file or updates the timestamp of an existing file. | `touch newfile.txt` creates an empty file named newfile.txt. |
+| 5 | `echo` | Displays a line of text or a variable value. | `echo "Hello, World!"` prints Hello, World! to the terminal.<br><br>`echo "Hello, World!" > filename.txt` creates a new text file named "filename.txt" (or overwrites it if it already exists) and writes the phrase "Hello, World!" into it.<br><br>`echo "Hello, World!" >> filename.txt` appends the phrase "Hello, World!" to the end of the existing file named "filename.txt" (or creates the file if it doesn't exist). |
