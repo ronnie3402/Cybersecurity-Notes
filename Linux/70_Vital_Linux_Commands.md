@@ -1,5 +1,9 @@
 # 🐧 70+ Vital Linux Commands for Cybersecurity Analysts
 
+> *This is a quick-reference survival guide bridging the gap between basic Linux administration and daily SOC operations. Curated for rapid incident response, log analysis, and system enumeration.*
+
+---
+
 ## 📌 Overview
 This cheat sheet contains essential Linux commands required for daily SOC operations, system administration, and rapid incident response. 
 
