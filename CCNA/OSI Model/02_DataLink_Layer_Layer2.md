@@ -5,7 +5,6 @@ The Data Link Layer provides reliable communication between directly connected d
 
 
 
----
 
 ## Responsibilities
 * **Framing:** Encapsulating packets from the Network Layer into frames.
