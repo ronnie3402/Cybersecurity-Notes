@@ -3,7 +3,7 @@
 ## Overview
 A structured guide to unlocking the full potential of Nmap for comprehensive network reconnaissance and vulnerability assessment. These techniques are essential for ethical penetration testing and security auditing.
 
----
+
 
 ## 1. Fundamentals: Host Discovery & Port Scanning
 Identifying live hosts and open ports is the foundational step in any penetration test.
