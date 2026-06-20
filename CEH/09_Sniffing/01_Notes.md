@@ -1,9 +1,9 @@
-# Network Attacks & Packet Analysis (Module 08)
+# Network Attacks & Packet Analysis (Module 09)
 
-> **Overview**
-> This module covers the core tools and methodologies used for network traffic analysis, Layer-2 attacks (DHCP, STP, ARP), and modern Man-in-the-Middle (MitM) frameworks. Understanding both offensive techniques and defensive configurations is critical for network security.
+# Overview
+This module covers the core tools and methodologies used for network traffic analysis, Layer-2 attacks (DHCP, STP, ARP), and modern Man-in-the-Middle (MitM) frameworks. Understanding both offensive techniques and defensive configurations is critical for network security.
 
----
+
 
 ## 1. Packet Analysis: Wireshark vs. tcpdump
 Security professionals rarely rely on a single tool; instead, they use a combination of tools depending on the environment (GUI vs. Headless).
