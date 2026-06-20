@@ -1,4 +1,4 @@
-# Module 7: System Hacking Labs
+# Module 7 Labs: System Hacking Labs
 
 Advanced penetration testing techniques including reverse shells, proxy chaining, brute forcing, and privilege escalation through hands-on labs.
 
