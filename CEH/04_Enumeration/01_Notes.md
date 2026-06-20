@@ -1,4 +1,4 @@
-# Network Service Enumeration Notes (Part 1)
+# Network Service Enumeration Notes (Module 04-Part 1)
 
 ## Introduction to Enumeration
 
