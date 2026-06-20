@@ -1,4 +1,4 @@
-# System Hacking (Module 06)
+# System Hacking (Module 07)
 
 # Overview
 System hacking is the core phase where an attacker exploits vulnerabilities to gain access, elevate privileges, and maintain control over a target system while evading detection.
