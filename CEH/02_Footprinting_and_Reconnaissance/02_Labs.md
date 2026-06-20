@@ -3,7 +3,7 @@
 ## Overview
 Essential OSINT techniques and tools for security analysts conducting passive and active reconnaissance operations.
 
----
+
 
 ## 1. Email OSINT & Footprinting
 Email footprinting reveals organizational structure, employee information, and potential security exposures. It combines public data mining with breach databases to build comprehensive target profiles.
