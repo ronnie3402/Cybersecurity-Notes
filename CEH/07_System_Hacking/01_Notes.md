@@ -334,14 +334,15 @@ scp -P 22 file user@target_ip:/tmp/
 
 ## Linux Exploitation Tools
 
-### GTFOBins
+### GTFOBins (https://gtfobins.org/)
+
 
 Used for bypassing local security restrictions and abusing legitimate binaries.
 
-### LinPEAS
+### LinPEAS (https://github.com/peass-ng/PEASS-ng)
 
 Automated Linux enumeration script used during privilege escalation.
 
-### Linux-Exploit-Suggester
+### Linux-Exploit-Suggester (https://github.com/The-Z-Labs/linux-exploit-suggester)
 
 Enumerates the system and suggests possible local privilege escalation CVEs.
