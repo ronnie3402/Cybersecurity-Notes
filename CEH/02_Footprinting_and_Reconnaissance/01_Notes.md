@@ -3,7 +3,7 @@
 ## Overview
 Reconnaissance (or Footprinting) is the first and most critical phase of the ethical hacking methodology. The objective is to gather as much intelligence about the target as possible to accurately map the attack surface before planning an engagement.
 
----
+
 
 ## The 4 Systematic Phases of Reconnaissance
 
