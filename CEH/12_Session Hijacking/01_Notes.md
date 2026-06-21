@@ -1,4 +1,4 @@
-# Sessions, Cookies & Session Hijacking — Complete Notes
+# Sessions, Cookies & Session Hijacking (Module 12)
 
 Sessions and cookies are the backbone of how the web "remembers" a logged-in user. Understanding how they work — and exactly how attackers abuse them — is essential both for web development and for offensive/defensive security (CEH-style) study. These notes walk through the full lifecycle: how a session is created, how it's stored, how it can be stolen, and how to defend it properly.
 
