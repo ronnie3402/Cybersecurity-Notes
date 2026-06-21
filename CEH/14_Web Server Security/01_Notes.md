@@ -4,7 +4,7 @@ Web servers sit right at the edge of an organization's network — publicly reac
 
 ---
 
-## Module 1: How Web Servers Operate
+## 1: How Web Servers Operate
 
 Before attacking (or defending) a web server, it helps to understand what it's actually doing: acting as the **middleman** between a client (a browser) and the application/data behind it. A web server receives an HTTP/HTTPS request, processes it according to its configuration, and sends back the appropriate response. That behavior is controlled through configuration files — `httpd.conf` for Apache, `nginx.conf` for Nginx, and so on.
 
@@ -20,7 +20,7 @@ Before attacking (or defending) a web server, it helps to understand what it's a
 
 ---
 
-## Module 2: Common Web Server Attack Vectors
+## 2: Common Web Server Attack Vectors
 
 These are the four most frequent ways attackers actually get a foothold on a web server — notice that none of them require a fancy zero-day exploit; they almost all come down to human error or neglect.
 
@@ -35,7 +35,7 @@ These are the four most frequent ways attackers actually get a foothold on a web
 
 ---
 
-## Module 3: DNS Server Hijacking
+## 3: DNS Server Hijacking
 
 DNS is what translates a domain name (`example.com`) into the IP address browsers actually use to connect. If an attacker can tamper with that translation step, they can quietly redirect a victim's traffic anywhere they want — without the victim ever noticing the URL bar look "wrong."
 
@@ -57,7 +57,7 @@ DNS is what translates a domain name (`example.com`) into the IP address browser
 
 ---
 
-## Module 4: Enhancing Web Server Security
+## 4: Enhancing Web Server Security
 
 No single tool secures a web server on its own — real-world hardening relies on layering several types of protection together.
 
@@ -71,7 +71,7 @@ No single tool secures a web server on its own — real-world hardening relies o
 
 ---
 
-## Module 5: Website Defacement Prevention
+## 5: Website Defacement Prevention
 
 "Defacement" refers to an attacker altering a website's visible content — replacing a homepage with their own message, for example. It's one of the more visible (and embarrassing) outcomes of poor server security.
 
@@ -90,7 +90,7 @@ Defacement usually traces back to one of three things: **weak file permissions, 
 
 ---
 
-## Module 6: Web Server Attack Methodology
+## 6: Web Server Attack Methodology
 
 This is the structured process a penetration tester (or attacker) follows when targeting a web server — essentially a mini "kill chain" specific to web infrastructure.
 
@@ -107,7 +107,7 @@ This is the structured process a penetration tester (or attacker) follows when t
 
 ---
 
-## Module 7: The Critical Importance of Patch Management
+## 7: The Critical Importance of Patch Management
 
 ### The Risk of Staying Unpatched
 
@@ -123,7 +123,7 @@ Outdated systems remain vulnerable to **known** exploits — and these aren't ob
 
 ---
 
-## Module 8: Essential Tools for Web Server Assessment
+## 8: Essential Tools for Web Server Assessment
 
 These are the standard tools used during the reconnaissance and scanning stages of the attack methodology (Module 6).
 
