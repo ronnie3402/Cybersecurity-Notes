@@ -355,4 +355,4 @@ hashcat
 - Common Bluetooth attacks include Bluejacking, Bluesnarfing, and Bluebugging.
 - Aircrack-ng and Hashcat are widely used during wireless security assessments.
 
-> **Ethical Note:** Perform wireless security testing only in authorized environments or with explicit written permission.
+
