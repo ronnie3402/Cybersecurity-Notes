@@ -1,4 +1,4 @@
-# Exploiting Web Servers: Vulnerabilities & Defense
+# Exploiting Web Servers: Vulnerabilities & Defense (Module 14)
 
 Web servers sit right at the edge of an organization's network — publicly reachable, always-on, and often running a mix of software that's easy to misconfigure. That combination makes them one of the most heavily targeted pieces of infrastructure on the internet. This module covers how attackers approach web servers — through misconfigurations, outdated software, DNS weaknesses, and missed patches — and the defensive techniques that counter each of those angles.
 
