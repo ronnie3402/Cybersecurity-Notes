@@ -1,4 +1,4 @@
-# Cryptography: Comprehensive Study Notes
+# Cryptography Notes (Module 21)
 
 ---
 
