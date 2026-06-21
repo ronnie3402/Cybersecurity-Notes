@@ -1,4 +1,4 @@
-# Module 10: Denial-of-Service Attacks
+# Denial-of-Service Attacks (Module 11)
 
 Essential knowledge for defending against one of the most disruptive cyber threats facing organizations today.
 
