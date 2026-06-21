@@ -1,4 +1,4 @@
-# Wireless Network Security & Exploitation
+# Wireless Network Security & Exploitation (Module 17)
 
 ## 1. Introduction
 
