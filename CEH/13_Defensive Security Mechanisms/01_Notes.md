@@ -1,4 +1,4 @@
-# Bypassing IDS, Firewalls, and Honeypots
+# Bypassing IDS, Firewalls, and Honeypots (Module 13)
 
 This topic is essentially cybersecurity's version of a cat-and-mouse game. The goal isn't to learn hacking for its own sake — it's to understand exactly where security controls fall short, so those gaps can be closed. These notes cover three core defensive tools (IDS, Firewalls, Honeypots), how each one works, and the specific techniques attackers use to slip past them.
 
