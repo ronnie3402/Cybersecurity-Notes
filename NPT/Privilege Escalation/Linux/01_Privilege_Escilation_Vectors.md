@@ -1,6 +1,6 @@
 # Linux Privilege Escalation (Module 10)
 
-> **Overview**
+# Overview
 > Privilege Escalation (PrivEsc) is the process of elevating standard user permissions to Administrator (`root`) access. In enterprise environments and penetration testing (e.g., OSCP), misconfigurations can occur at multiple layers. This module covers the 12 core industry-standard vectors for Linux Privilege Escalation.
 
 ---
