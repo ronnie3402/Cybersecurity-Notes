@@ -206,4 +206,4 @@ sudo chmod 644 /etc/passwd
 Even if you don’t know the root password,  
 you can **become root by creating your own UID 0 user**.
 
----
+
