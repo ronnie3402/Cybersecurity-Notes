@@ -1,4 +1,4 @@
-## 📝 Linux PrivEsc Notes: World-Writable `/etc/passwd` File
+## 📝 Linux PrivEsc Notes: Writable `/etc/passwd` File
 
 ---
 
