@@ -382,7 +382,7 @@ Unlike images, containers consume system resources such as:
 Example: 
 
 ```
-docker run ubuntu
+docker run -it ubuntu /bin/bash
 ```
 
 When this command is executed, Docker creates and starts a live Ubuntu container based on the Ubuntu image. 
@@ -1968,7 +1968,23 @@ Stops and starts the container. Containers using the image must be removed first
 
 Ignores stopped-container dependencies. 
 
-`docker rm <id>` Permanently removes a stopped Deletes the writable container container. layer. `docker logs <id>` Displays container logs. Useful for troubleshooting. Continuously streams container Recommended for monitoring `docker logs -f <id>` logs. background tasks. `docker exec -it` Opens a shell inside a running Useful for troubleshooting and `<id> /bin/bash` container. debugging. `docker network create` Creates a custom Docker Enables secure container `<name>` network. communication. `docker volume create <name>` Creates a named volume. Used for persistent storage. `docker-compose up -d`[Starts services defined in a ] Legacy syntax. Compose file. `docker compose up -d`[Starts services using modern ] Recommended syntax. Compose syntax. Stops and removes Compose- `docker-compose down` Legacy syntax. managed containers. Stops and removes Compose- `docker compose down` Recommended syntax. managed containers. `docker build -t` Builds an image from a `.` refers to the current directory as `<name>:<tag> .` Dockerfile. build context. Authenticates with Docker `docker login` Required before pushing images. Hub. `docker push` Example: `docker push` Uploads an image to Docker `<repository> username/test-app` 
+```md
+| Command | Purpose | Notes / Flags |
+|----------|---------|---------------|
+| `docker rm <id>` | Permanently removes a stopped container. | Deletes the writable container layer. |
+| `docker logs <id>` | Displays container logs. | Useful for troubleshooting. |
+| `docker logs -f <id>` | Continuously streams container logs. | Recommended for monitoring background tasks. |
+| `docker exec -it <id> /bin/bash` | Opens a shell inside a running container. | Useful for troubleshooting and debugging. |
+| `docker network create <name>` | Creates a custom Docker network. | Enables secure container communication. |
+| `docker volume create <name>` | Creates a named volume. | Used for persistent storage. |
+| `docker-compose up -d` | Starts services defined in a Compose file. | Legacy syntax. |
+| `docker compose up -d` | Starts services using modern Compose syntax. | Recommended syntax. |
+| `docker-compose down` | Stops and removes Compose-managed containers. | Legacy syntax. |
+| `docker compose down` | Stops and removes Compose-managed containers. | Recommended syntax. |
+| `docker build -t <name>:<tag> .` | Builds an image from a Dockerfile. | `.` refers to the current directory as the build context. |
+| `docker login` | Authenticates with Docker Hub. | Required before pushing images. |
+| `docker push <repository>` | Uploads an image to Docker Hub. | Example: `docker push username/test-app` |
+```
 
 **Command** 
 
